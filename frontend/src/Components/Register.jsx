@@ -54,7 +54,7 @@ const Register = () => {
         <input className='file-input file-input-primary' type="file" name="profile_image" onChange={(e)=>setProfile_image(e.target.files[0])} />
         <button type="submit" className='btn btn-primary'>Register</button>
         <p className="">Already have an Account ?<Link to={'/login'}><span className="text-info ml-4  ">Sign In</span></Link></p>
-        <p className='text-error'>{message}</p>
+        {message && <p className='text-error'>{message}</p>}
       </form>
     </div>
   )

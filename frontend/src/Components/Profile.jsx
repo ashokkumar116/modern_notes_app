@@ -78,7 +78,7 @@ const Profile = () => {
                         Edit Profile
                     </button>
                     <button
-                        className="btn btn-info"
+                        className="btn btn-accent"
                         onClick={(e)=>setShowEditImage(true)}
                     >
                         Edit Profile Image
@@ -88,11 +88,11 @@ const Profile = () => {
                         {showEdit && (
                             <div className="editModal mb-5 fixed top-0 bg-[rgba(0,0,0,0.6)] w-[100%] h-[100%]">
 
-                            <form className="animate-popup fixed top-0 z-50 top-1/2 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col gap-5 items-center justify-center rounded-md bg-gray-800 p-10" onSubmit={handleEditSave}>
+                            <form className="animate-popup w-100 fixed top-0 z-50 top-1/2 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col gap-5 items-center justify-center rounded-md bg-gray-800 p-10" onSubmit={handleEditSave}>
                                 <input className="input input-primary" type="text" name="username" value={username} onChange={(e)=>setUserName(e.target.value)}/>
                                 <input className="input input-primary" type="email" name="email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
                                 <input className="input input-primary" type="number" name="contact"value={contact} onChange={(e)=>setContact(e.target.value)} />
-                                <button className="btn btn-info">Update Profile</button>
+                                <button type="submit" className="btn btn-info">Update Profile</button>
                                 <button className='btn btn-error' onClick={()=>setIsEditing(false)}>Cancel</button>
                             </form>
 

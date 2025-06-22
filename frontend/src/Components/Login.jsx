@@ -54,7 +54,7 @@ const Login = () => {
                 <Link to={'/forgotPass'}>Forgot Password ?</Link>
                 <button className="btn btn-primary w-50" type="submit">Login</button>
                 <p className="">Dont have an Account ?<Link to={'/register'}><span className="text-info ml-4  ">Sign Up</span></Link></p>
-                <p className="text-error">{message}</p>
+                {message && <p className="text-error">{message}</p>}
             </form>
         </div>
     );
