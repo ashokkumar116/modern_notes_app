@@ -28,7 +28,7 @@ const Navbar = () => {
                                 <div className="w-10 rounded-full">
                                     <img
                                         alt="Tailwind CSS Navbar component"
-                                        src={user.profile_image ? `http://localhost:5000${user.profile_image}` : `http://localhost:5000/uploads/default.webp` }
+                                        src={user.profile_image ? `https://modern-notes-app-zeiy.onrender.com${user.profile_image}` : `http://localhost:5000/uploads/default.webp` }
                                     />
                                 </div>
                             </div>

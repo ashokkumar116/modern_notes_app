@@ -63,8 +63,8 @@ const Profile = () => {
                         className="avatar rounded-full w-30 h-30 ring-primary ring-offset-base-100 ring-2 ring-offset-2"
                         src={
                             user.profile_image
-                                ? `http://localhost:5000${user.profile_image}`
-                                : `http://localhost:5000/uploads/default.webp`
+                                ? `https://modern-notes-app-zeiy.onrender.com${user.profile_image}`
+                                : `https://modern-notes-app-zeiy.onrender.com/uploads/default.webp`
                         }
                         alt=""
                     />

@@ -4,7 +4,7 @@ const db = require('../db');
 const createNote = async (req,res)=>{
     const {note} = req.body;
     const id = req.user.id;
-    const timeframe = new Date().toISOString();
+    const timeframe = new Date().toISOString().slice(0, 19).replace('T', ' ');
     const sql = "INSERT INTO notes (user_id,note,date) VALUES (?,?,?)";
     
     await db.query(sql,[id,note,timeframe]);
