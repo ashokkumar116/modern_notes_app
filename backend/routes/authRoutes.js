@@ -2,8 +2,7 @@ const express = require('express');
 const { register ,login, uploadProfile, getCurrentUser,logout,editUser ,sendOtp ,verifyOtp,passReset} = require('../controllers/authController');
 const router = express.Router();
 const upload = require("../middlewares/profile_upload.js");
-const auth = require('../../../protected-routes-practice-1/server/auth');
-
+const auth = require('../middlewares/auth')
 router.post('/register',upload.single("profile_image"),register);
 router.post('/login',login);
 router.post('/logout',logout);

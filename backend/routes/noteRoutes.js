@@ -1,6 +1,6 @@
 const express = require('express');
 const { createNote, getAllNotes, editNote, deleteNote } = require('../controllers/noteController');
-const auth = require('../../../protected-routes-practice-1/server/auth');
+const auth = require('../middlewares/auth')
 const router = express.Router();
 
 router.post('/create',auth,createNote);

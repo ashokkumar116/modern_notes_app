@@ -9,7 +9,7 @@ export const AuthProvider = ({children}) =>{
     const [loading,setLoading] = useState(true);
 
 
-    const fetchUser =async () =>{
+    const fetchUser =async () =>{   
         try {
             const data = await axios.get('/auth/me',{withCredentials:true});
             setUser(data.data);
